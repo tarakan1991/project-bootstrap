@@ -1,4 +1,6 @@
 # Файлы репозитория, не входящие в сам скил: git archive их не кладёт,
 # поэтому zip для загрузки в Customize → Skills содержит ровно SKILL.md + templates/.
-README.md       export-ignore
-.gitattributes  export-ignore
+# Слэш обязателен: паттерн без него матчится по basename на любой глубине
+# и утащил бы шаблоны templates/README.md и templates/docs/README.md.
+/README.md       export-ignore
+/.gitattributes  export-ignore
