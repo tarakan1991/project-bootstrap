@@ -33,6 +33,7 @@
 | 3 | `git/branches-numbered` | `strategy ≠ trunk` И `tasks ≠ none` |
 | 3 | `git/branches-plain` | `strategy ≠ trunk` И `tasks=none` |
 | 3а | `git/branches-env` | `strategy=env-branches` (дополнительно к 3) |
+| 3б | `git/strategy-custom` | человек назвал свою стратегию — **вместо** блоков 3 и 5 |
 | 4 | `git/commits-conventional` · `commits-type-verb` · `commits-task-id` · `commits-free` | ровно один, по настройке формата коммитов; язык подставляется отдельным ответом |
 | 5 | `git/lifecycle-trunk` | `strategy=trunk` |
 | 5 | `git/lifecycle-branch` | `strategy=branch-per-task` |
