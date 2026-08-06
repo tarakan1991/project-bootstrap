@@ -1,0 +1,25 @@
+# CI GitLab: полная проверка на MR и push в main.
+# Правило проекта: docs-only изменения не гоняют пайплайн (docs/README.md).
+# ВНИМАНИЕ: в GitLab нет прямого аналога paths-ignore. Наивное
+# «rules: changes: [*.md] when: never» НЕЛЬЗЯ — rules:changes срабатывает при
+# ЛЮБОМ совпадении, и смешанный MR (код + доки) тоже пропустит проверку.
+# Правильно: когда появится структура кода — перечислить КОДОВЫЕ пути
+# позитивным списком в rules:changes:paths (см. TODO в джобе).
+# Плюс в Settings → Merge requests включить «Skipped pipelines are considered
+# successful», чтобы docs-only MR вливался без пайплайна.
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+tests:
+  # TODO (триггер «первый код»): включить запуск только по кодовым путям:
+  # rules:
+  #   - changes:
+  #       paths:
+  #         - "src/**/*"          # заменить на реальные кодовые пути
+  #         - "<модуль>/**/*"
+  script:
+    # TODO: установка окружения под стек + «единая команда проверки»
+    # из docs/workflow/conventions.md
+    - echo "TODO настроить единую команду проверки (conventions.md)"

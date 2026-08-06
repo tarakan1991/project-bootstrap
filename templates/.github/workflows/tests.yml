@@ -1,0 +1,26 @@
+# CI: полная проверка на PR и push в main.
+# Правило: docs-only изменения (*.md, docs/**) CI не гоняют — paths-ignore ниже.
+# Нюанс: если сделать этот check required в branch ruleset, docs-only PR получит
+# pending-check и не сможет влиться — решение описано в docs/workflow/git-workflow.md
+# (job-пустышка с тем же именем check'а на docs-only путях).
+name: tests
+on:
+  pull_request:
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**/*.md'
+      - 'docs/**'
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # TODO: установка окружения под стек + «единая команда проверки»
+      # из docs/workflow/conventions.md. Пока команды нет — шаг ниже напоминает о ней.
+      - name: Полная проверка
+        run: echo "TODO настроить единую команду проверки (conventions.md)"
