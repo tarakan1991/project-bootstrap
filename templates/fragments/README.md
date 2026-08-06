@@ -63,7 +63,7 @@
 | 4 | `conventions/coverage-existing` | порог уже задан в настройках или назван человеком |
 | 5 | `conventions/check-command` | `check ≠ none` |
 | 6 | `conventions/check-levels` | `check ≠ none` |
-| 7 | `conventions/migrations` | всегда — константа |
+| 7 | `conventions/migrations` | есть хранилище либо оно планируется. Утилита или библиотека без данных → секция не нужна, а правило остаётся строкой в `AGENTS.md`: появятся данные — развернуть |
 | 8 | `conventions/code` | всегда |
 | 9 | `conventions/logs` | всегда |
 
