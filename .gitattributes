@@ -4,3 +4,5 @@
 # и утащил бы шаблоны templates/README.md и templates/docs/README.md.
 /README.md       export-ignore
 /.gitattributes  export-ignore
+/SPEC.md         export-ignore
+/evals/**        export-ignore
