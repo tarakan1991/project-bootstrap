@@ -41,6 +41,7 @@
 | 6 | `git/accept-self-check` | `review=self-check` |
 | 6 | `git/accept-ship-show-ask` | `review=ship-show-ask` |
 | 6 | `git/accept-required` | `review=required` |
+| 6а | `git/review-process` | `review ≠ none` |
 | 7 | `git/integration-settings` | `strategy ≠ trunk` |
 | 8 | `git/cameo-fix` | `strategy ≠ trunk` |
 | 9 | `git/revert-pr` | `strategy ≠ trunk` |
