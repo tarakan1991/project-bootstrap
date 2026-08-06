@@ -5,4 +5,5 @@
 /README.md       export-ignore
 /.gitattributes  export-ignore
 /SPEC.md         export-ignore
+/evals           export-ignore
 /evals/**        export-ignore
